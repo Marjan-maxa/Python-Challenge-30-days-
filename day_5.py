@@ -80,6 +80,18 @@ while True:
         print("You won the game")
         break    
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 # Mini Project 2 — Multiplication Table    
     
 print("===== MULTIPLICATION TABLE =====")    
