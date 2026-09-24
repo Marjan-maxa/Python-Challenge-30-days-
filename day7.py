@@ -126,6 +126,13 @@ print( std_set)
 
 userNumbers=list(map(int,input("Enter some Numbers : ").split()))
 print( userNumbers)
+user_set = set(userNumbers)
+
+print("Unique Set:", user_set)
+
+final_list = list(user_set)
+
+print("Final List:", final_list)
 
 
 

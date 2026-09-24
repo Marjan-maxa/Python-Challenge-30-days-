@@ -26,90 +26,90 @@
 
  #challenge --1
  
-# students={
-#         "Name":"Marjan",
-#         "Age":23,
-#         "Department":"CSE",
-#         "cgpa":3.75
-#  }
-# print(students)
+students={
+        "Name":"Marjan",
+        "Age":23,
+        "Department":"CSE",
+        "cgpa":3.75
+ }
+print(students)
 
-#  #challenge --2
+ #challenge --2
  
-# print(students["Name"])
-# print(students["Age"])
-# print(students["cgpa"])
+print(students["Name"])
+print(students["Age"])
+print(students["cgpa"])
 
 
-#  #challenge --3
+ #challenge --3
  
-# student={
-#     "name":"Marjan",
-#     "age":23,
-#     "cgpa":3.50 ,
-# }
-# print(student)
-# student["age"]=24
-# student["cgpa"]=3.75
-# print(student)  
+student={
+    "name":"Marjan",
+    "age":23,
+    "cgpa":3.50 ,
+}
+print(student)
+student["age"]=24
+student["cgpa"]=3.75
+print(student)  
 
 
 #Challenge 4 — Add Data
-# student = {
-#     "name": "Marjan",
-#     "age": 23
-# }
-# student["department"]="CSE"
-# student["semester"]="6th"
-# print(student)
+student = {
+    "name": "Marjan",
+    "age": 23
+}
+student["department"]="CSE"
+student["semester"]="6th"
+print(student)
 
 
-# Challenge 5 — Delete
+#Challenge 5 — Delete
 
-# student = {
+student = {
 
-#     "name": "Marjan",
-#     "age": 23,
-#     "department": "CSE",
-#     "cgpa": 3.75
-# }
+    "name": "Marjan",
+    "age": 23,
+    "department": "CSE",
+    "cgpa": 3.75
+}
 
-# student.pop("age")
-# student.pop("cgpa")
-# print(student)
+student.pop("age")
+student.pop("cgpa")
+print(student)
 
-# Challenge 6 — Keys & Values
+#Challenge 6 — Keys & Values
 
-# student = {
-#     "name": "Marjan",
-#     "age": 23,
-#     "department": "CSE"
-# }
-# print(student.keys())
-# print(student.values())
+student = {
+    "name": "Marjan",
+    "age": 23,
+    "department": "CSE"
+}
+print(student.keys())
+print(student.values())
 
 
 #Roadmap Homework — Student Record System
 
 #step 1
-# student={
-#     "name":"Raj",
-#     "id":101,
-#     "deartmpent":"EEE",
-#     "CGPA":"3.76",
-#     "Address":"Rangur,Bangladesh" ,
-#     "E-mail Adress":"praj12@gmail.com"   
-# }
+student={
+    "name":"Raj",
+    "id":101,
+    "deartmpent":"EEE",
+    "CGPA":"3.76",
+    "Address":"Rangur,Bangladesh" ,
+    "E-mail Adress":"praj12@gmail.com"   
+}
 
-# #step 2
-# print(student)
-# #step 3
-# student["CGPA"]=3.85
-# #step 4
-# student["semester"]="6th"
-# # step 5
-# student.pop("Address")
-# print(student)
+#step 2
+print(student)
+#step 3
+student["CGPA"]=3.85
+#step 4
+student["semester"]="6th"
+# step 5
+student.pop("Address")
+print(student)
 
 
 
@@ -133,6 +133,17 @@ student["Address"]="Rangpur"
 student.pop("EmailAdress")
 print(student)
 
+
+
+
+
+
+
+
+
+
+
+
 #Mini Project 2 — Simple Contact
 
 contact = {
@@ -145,3 +156,6 @@ print(contact["name"])
 contact["phone"]="01954233387"
 contact.pop("city")
 print(contact)
+
+
+
