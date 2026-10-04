@@ -1,0 +1,20 @@
+name=input("Enter your Name:")
+student_id=input("Enter Student ID :")
+mark1=float(input("Enter DSA mark :"))
+mark2=float(input("Enter AI mark :"))
+mark3=float(input("Enter Math mark :"))
+mark4=float(input("Enter SDM mark :"))
+mark5=float(input("Enter Mobile Application mark :"))
+total_mark=mark1+mark2+mark3+mark4+mark5
+average=total_mark/5
+percentage=(total_mark/500)*100
+highest = max(mark1, mark2, mark3, mark4, mark5)
+lowest = min(mark1, mark2, mark3, mark4, mark5)
+print("\n--- Student Result ---")
+print("Name:", name)
+print("Student ID:", student_id)
+print("Total Mark:", total_mark)
+print("Average:", average)
+print("Percentage:", percentage, "%")
+print("Highest Mark:", highest)
+print("Lowest Mark:", lowest)
