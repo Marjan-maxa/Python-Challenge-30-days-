@@ -36,13 +36,13 @@ file.close()
 
 
 
-create new file ,write ,read
+#create new file ,write ,read
 myFile=open("marjan.txt","x")
 myFile.write("boss kemon Aso")
 myFile.close()
 
 
-with open () - it can automatically close the file
+# with open () - it can automatically close the file
 
 with open("student.txt","w+") as ourFile:
     ourFile.write("Name : Marjan\n")
@@ -52,13 +52,13 @@ with open("student.txt","w+") as ourFile:
 print(d)    
     
 
-file not found
+# file not found
 
 with open("demo.txt","r") as topFile:
     print(topFile.read())    
 
 
-file handle wi8th error handle
+# file handle wi8th error handle
 
 try:
     with open("fgdf.txt","r") as we:

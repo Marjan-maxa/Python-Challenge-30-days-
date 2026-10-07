@@ -21,8 +21,6 @@ try:
         else:
             
             raise ValueError("Unsupported operator")
-
-
     num1 = float(input("Enter a first number: "))
     operator = input("Enter operator (+, -, *, /, %, **, //): ")
     num2 = float(input("Enter a second number: "))

@@ -5,34 +5,23 @@ n = int(input("How many numbers? "))
 for i in range(n):
     number = int(input("Enter number: "))
     numbers.append(number)
-
-
 # Sum
 total = 0
-
 for number in numbers:
     total = total + number
-
-
 # Maximum
 maximum = numbers[0]
 
 for number in numbers:
     if number > maximum:
         maximum = number
-
-
 # Minimum
 minimum = numbers[0]
 
 for number in numbers:
     if number < minimum:
         minimum = number
-
-
 average = total / len(numbers)
-
-
 # Even and Odd
 even = []
 odd = []
@@ -43,8 +32,6 @@ for number in numbers:
         even.append(number)
     else:
         odd.append(number)
-
-
 # Duplicate
 duplicates = []
 
@@ -57,11 +44,8 @@ for i in range(len(numbers)):
             if numbers[i] not in duplicates:
                 duplicates.append(numbers[i])
 
-
 ascending = sorted(numbers)
 descending = sorted(numbers, reverse=True)
-
-
 print("\n--- List Result ---")
 print("Numbers:", numbers)
 print("Sum:", total)

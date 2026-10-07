@@ -1,9 +1,7 @@
 number=int(input("Enter a number :"))
-
 if number<2:
     
     print("Not prime number")
-    
 else:
     for i in range(2,number):
         
