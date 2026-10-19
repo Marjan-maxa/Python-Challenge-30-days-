@@ -1,0 +1,17 @@
+import pandas as pd
+df=pd.read_csv("students.csv")
+print("-------------------------------")
+print("Student Information Report ")
+print("-------------------------------")
+print(df)
+print("Total Students :",len(df)," Students")
+print("Average CGPA :",round(df["cgpa"].mean(),2))
+print("Highest get CSE  Student :")
+print(df.loc[df["cgpa"].idxmax()])
+print("Department wise Average cgpa :")
+print(df.groupby(by="department")["cgpa"].mean())
+sorted_student=df.sort_values(by="cgpa",ascending=False)
+print("sorted Student cgpa :")
+print(sorted_student)
+
+print(df.isnull().sum())

@@ -1,43 +1,140 @@
-import sys
-from OpenGL.GL import *
-from OpenGL.GLU import *
-from OpenGL.GLUT import *
-
-
-def init():
-    glClearColor(0.0, 0.0, 0.0, 1.0)
-    glColor3f(1.0, 1.0, 1.0)
-
-
-def display():
-    glClear(GL_COLOR_BUFFER_BIT)
-    glBegin(GL_TRIANGLES)
-    glVertex2f(-0.5, -0.5)
-    glVertex2f(0.5, -0.5)
-    glVertex2f(0.0, 0.5)
-    glEnd()
-    glFlush()
-
-
-def reshape(width, height):
-    glViewport(0, 0, width, height)
-    glMatrixMode(GL_PROJECTION)
-    glLoadIdentity()
-    gluOrtho2D(-1.0, 1.0, -1.0, 1.0)
-    glMatrixMode(GL_MODELVIEW)
-
-
-def main():
-    glutInit(sys.argv)
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)
-    glutInitWindowSize(500, 500)
-    glutCreateWindow(b"OpenGL Triangle")
-
-    init()
-    glutDisplayFunc(display)
-    glutReshapeFunc(reshape)
-    glutMainLoop()
-
-
-if __name__ == "__main__":
-    main()
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "be73ce9f",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31mThe Kernel crashed while executing code in the current cell or a previous cell. \n",
+      "\u001b[1;31mPlease review the code in the cell(s) to identify a possible cause of the failure. \n",
+      "\u001b[1;31mClick <a href='https://aka.ms/vscodeJupyterKernelCrash'>here</a> for more info. \n",
+      "\u001b[1;31mView Jupyter <a href='command:jupyter.viewOutput'>log</a> for further details."
+     ]
+    }
+   ],
+   "source": [
+    "import sys\n",
+    "from OpenGL.GL import *\n",
+    "from OpenGL.GLU import *\n",
+    "from OpenGL.GLUT import *\n",
+    "\n",
+    "\n",
+    "def init():\n",
+    "    glClearColor(0.0, 0.0, 0.0, 1.0)\n",
+    "    glColor3f(1.0, 1.0, 1.0)\n",
+    "\n",
+    "\n",
+    "def display():\n",
+    "    glClear(GL_COLOR_BUFFER_BIT)\n",
+    "    glBegin(GL_LINES)\n",
+    "    glVertex2f(-0.8, 0.0)\n",
+    "    glVertex2f(0.8, 0.0)\n",
+    "    glEnd()\n",
+    "    glFlush()\n",
+    "\n",
+    "\n",
+    "def reshape(width, height):\n",
+    "    glViewport(0, 0, width, height)\n",
+    "    glMatrixMode(GL_PROJECTION)\n",
+    "    glLoadIdentity()\n",
+    "    gluOrtho2D(-1.0, 1.0, -1.0, 1.0)\n",
+    "    glMatrixMode(GL_MODELVIEW)\n",
+    "\n",
+    "\n",
+    "def main():\n",
+    "    glutInit(sys.argv)\n",
+    "    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)\n",
+    "    glutInitWindowSize(500, 500)\n",
+    "    glutCreateWindow(b\"OpenGL Line\")\n",
+    "\n",
+    "    init()\n",
+    "    glutDisplayFunc(display)\n",
+    "    glutReshapeFunc(reshape)\n",
+    "    glutMainLoop()\n",
+    "\n",
+    "\n",
+    "if __name__ == \"__main__\":\n",
+    "    main()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0c3c6329",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import sys\n",
+    "from OpenGL.GL import *\n",
+    "from OpenGL.GLU import *\n",
+    "from OpenGL.GLUT import *\n",
+    "\n",
+    "\n",
+    "def init():\n",
+    "    glClearColor(0.0, 0.0, 0.0, 1.0)\n",
+    "    glColor3f(1.0, 1.0, 1.0)\n",
+    "\n",
+    "\n",
+    "def display():\n",
+    "    glClear(GL_COLOR_BUFFER_BIT)\n",
+    "    glBegin(GL_TRIANGLES)\n",
+    "    glVertex2f(-0.5, -0.5)\n",
+    "    glVertex2f(0.5, -0.5)\n",
+    "    glVertex2f(0.0, 0.5)\n",
+    "    glEnd()\n",
+    "    glFlush()\n",
+    "\n",
+    "\n",
+    "def reshape(width, height):\n",
+    "    glViewport(0, 0, width, height)\n",
+    "    glMatrixMode(GL_PROJECTION)\n",
+    "    glLoadIdentity()\n",
+    "    gluOrtho2D(-1.0, 1.0, -1.0, 1.0)\n",
+    "    glMatrixMode(GL_MODELVIEW)\n",
+    "\n",
+    "\n",
+    "def main():\n",
+    "    glutInit(sys.argv)\n",
+    "    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)\n",
+    "    glutInitWindowSize(500, 500)\n",
+    "    glutCreateWindow(b\"OpenGL Triangle\")\n",
+    "\n",
+    "    init()\n",
+    "    glutDisplayFunc(display)\n",
+    "    glutReshapeFunc(reshape)\n",
+    "    glutMainLoop()\n",
+    "\n",
+    "\n",
+    "if __name__ == \"__main__\":\n",
+    "    main()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
