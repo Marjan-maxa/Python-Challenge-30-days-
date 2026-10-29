@@ -1,10 +1,10 @@
 from PIL import Image   
 img=Image.open("resized_image.jpg")
-# img.show()
-# print("Width:", img.width)
-# print("Height:", img.height)
-# print("Format:", img.format)
-# print("Size:", img.size)
+img.show()
+print("Width:", img.width)
+print("Height:", img.height)
+print("Format:", img.format)
+print("Size:", img.size)
 resized_image=img.resize((300,220))
 resized_image.save("resized_image.jpg")
 

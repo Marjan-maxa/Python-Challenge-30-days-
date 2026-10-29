@@ -2,24 +2,24 @@
 
 #inheritence
 
-# class Student:
-#     def __init__(self,name,std_id):
-#         self.name=name
-#         self.std_id=std_id
+class Student:
+    def __init__(self,name,std_id):
+        self.name=name
+        self.std_id=std_id
            
 
-# class myStudents(Student):
-#     def __init__(self, name, std_id,dept):
-#         super().__init__(name, std_id)     # super keyword
-#         self.dept=dept
-#     def display(self):
-#         print("Name :",self.name)
-#         print("Student Id :",self.std_id)
-#         print("Department name :",self.dept)    
-# std1 = myStudents("Marjan", 123445,"CSE")
+class myStudents(Student):
+    def __init__(self, name, std_id,dept):
+        super().__init__(name, std_id)     # super keyword
+        self.dept=dept
+    def display(self):
+        print("Name :",self.name)
+        print("Student Id :",self.std_id)
+        print("Department name :",self.dept)    
+std1 = myStudents("Marjan", 123445,"CSE")
 
     
-# std1.display()         
+std1.display()         
 
 
 
@@ -29,55 +29,55 @@
 
 
 
-# class BankAccount:
-#     def __init__(self,balance):
-#         self.__balance=balance
+class BankAccount:
+    def __init__(self,balance):
+        self.__balance=balance
         
-#     def showBalance(self):
-#         print("Balance :",self.__balance)     
+    def showBalance(self):
+        print("Balance :",self.__balance)     
         
-# bal=BankAccount(2000)
-# bal.showBalance()    
-# print(bal.__balance )   
+bal=BankAccount(2000)
+bal.showBalance()    
+print(bal.__balance )   
 
 
 
-# class BankAccount:
-#     def __init__(self, balance):
-#         self.__balance = balance
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance
 
-#     def deposit(self, amount):
-#         if amount > 0:
-#             self.__balance += amount
-#             print("Deposit successful")
-#         else:
-#             print("Invalid amount")
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print("Deposit successful")
+        else:
+            print("Invalid amount")
 
-#     def show_balance(self):
-#         print("Balance:", self.__balance)
+    def show_balance(self):
+        print("Balance:", self.__balance)
 
 
-# account = BankAccount(1000)
+account = BankAccount(1000)
 
-# account.deposit(500)
-# account.show_balance()
-# print(account.__balance) # error, we cann't direct access
+account.deposit(500)
+account.show_balance()
+print(account.__balance) # error, we cann't direct access
 
 
 #polymorphism
 
-# class Dog:
-#     def display (self):
-#         print("Dog barking : woaf")
+class Dog:
+    def display (self):
+        print("Dog barking : woaf")
         
-# class Cat:
-#     def display(self):
-#         print("Cat says :meaw!!")        
+class Cat:
+    def display(self):
+        print("Cat says :meaw!!")        
         
-# obj1=Dog()
-# obj2=Cat()
-# obj1.display()   
-# obj2.display()     
+obj1=Dog()
+obj2=Cat()
+obj1.display()   
+obj2.display()     
 
 
 
@@ -88,19 +88,19 @@
 #abstract method
 
 
-# from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
-# class Payment(ABC):
-#     @abstractmethod
-#     def payment(self,amount):
-#         pass
-# class mobileBanking(Payment):
-#     def payment(self, amount):
-#         print("Payment :",amount)
+class Payment(ABC):
+    @abstractmethod
+    def payment(self,amount):
+        pass
+class mobileBanking(Payment):
+    def payment(self, amount):
+        print("Payment :",amount)
     
     
-# obj=mobileBanking()
-# obj.payment(3436)   
+obj=mobileBanking()
+obj.payment(3436)   
     
     
         
@@ -111,28 +111,28 @@
  
  
 
-# class Person:
-#     def __init__(self,name,age):
-#         self.name=name
-#         self.age=age
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
         
-#     def show_info(self):
-#         print("Name :",self.name)
-#         print("Age :",self.age)    
+    def show_info(self):
+        print("Name :",self.name)
+        print("Age :",self.age)    
         
            
-# class Employee(Person):
-#     def __init__(self, name, age,salary):
-#         self.name=name
-#         self.age=age
-#         self.salary=salary
+class Employee(Person):
+    def __init__(self, name, age,salary):
+        self.name=name
+        self.age=age
+        self.salary=salary
         
-#     def show_info(self):
-#             print("Name :",self.name)
-#             print("Age :",self.age) 
-#             print("Salary :",self.salary)   
-# obj1=Employee("marjan",23,50000) 
-# obj1.show_info()       
+    def show_info(self):
+            print("Name :",self.name)
+            print("Age :",self.age) 
+            print("Salary :",self.salary)   
+obj1=Employee("marjan",23,50000) 
+obj1.show_info()       
 
 
 
@@ -141,21 +141,21 @@
 
 #challenge--2
 
-# class Student:
-#     def __init__(self,name,std_id):
-#         self.name=name
-#         self.std_id=std_id
-# class CSEStudent(Student):
-#     def __init__(self,name,std_id,cgpa):
-#         super().__init__(name,std_id)
-#         self.cgpa=cgpa
-#     def display(self): 
-#         print("Name :",self.name)
-#         print("Student Id :",self.std_id)
-#         print("CGPA :",self.cgpa)               
+class Student:
+    def __init__(self,name,std_id):
+        self.name=name
+        self.std_id=std_id
+class CSEStudent(Student):
+    def __init__(self,name,std_id,cgpa):
+        super().__init__(name,std_id)
+        self.cgpa=cgpa
+    def display(self): 
+        print("Name :",self.name)
+        print("Student Id :",self.std_id)
+        print("CGPA :",self.cgpa)               
         
-# obj1=CSEStudent("Ashraf",4324,3.12)        
-# obj1.display()
+obj1=CSEStudent("Ashraf",4324,3.12)        
+obj1.display()
 
 
 
@@ -163,35 +163,35 @@
 #challange -- 3
 #ATM BOTH
 
-# class BankAccount:
-#     def __init__(self,balance):
-#         self.__balance=balance
-#     def deposit(self, amount):
-#         if amount<=0:
-#             print("Invalid Deposit Amount!!")
-#         else:
-#             self.__balance+=amount
-#             print("Deposit Successful :",amount,"tk.")    
-#     def withdraw(self,amount):
-#         if amount>self.__balance:
-#             print("Insufficient Balance !")        
-#         elif amount<=self.__balance:
-#             self.__balance-=amount
-#             print("Withdrawl Successful :",amount,"tk.")    
-#         else:
-#             print("Invalid Amount")    
+class BankAccount:
+    def __init__(self,balance):
+        self.__balance=balance
+    def deposit(self, amount):
+        if amount<=0:
+            print("Invalid Deposit Amount!!")
+        else:
+            self.__balance+=amount
+            print("Deposit Successful :",amount,"tk.")    
+    def withdraw(self,amount):
+        if amount>self.__balance:
+            print("Insufficient Balance !")        
+        elif amount<=self.__balance:
+            self.__balance-=amount
+            print("Withdrawl Successful :",amount,"tk.")    
+        else:
+            print("Invalid Amount")    
             
             
-#     def showBalance(self):
-#         print("Current Balance :",self.__balance,"tk.")       
+    def showBalance(self):
+        print("Current Balance :",self.__balance,"tk.")       
 
 
-# object1=BankAccount(5000)            
-# object1.showBalance()
-# object1.deposit(1500)
-# object1.showBalance()
-# object1.withdraw(700)
-# object1.showBalance()
+object1=BankAccount(5000)            
+object1.showBalance()
+object1.deposit(1500)
+object1.showBalance()
+object1.withdraw(700)
+object1.showBalance()
 
 
 
@@ -199,42 +199,42 @@
 
 #challenge -- 4
 
-# class Dog:
-#     def sound(self):
-#         print("Dog barking !")
+class Dog:
+    def sound(self):
+        print("Dog barking !")
         
-# class Cat:
-#     def sound(self):
-#          print("Cat say : mauw !!")       
+class Cat:
+    def sound(self):
+         print("Cat say : mauw !!")       
          
-# class Cow:
-#     def sound(self):
-#         print("Cow says : hamba hubaa!!!")         
+class Cow:
+    def sound(self):
+        print("Cow says : hamba hubaa!!!")         
 
 
-# obj1=Dog()
-# obj2=Cat()
-# obj3 =Cow()
-# obj1.sound()
-# obj2.sound()
-# obj3.sound()        
+obj1=Dog()
+obj2=Cat()
+obj3 =Cow()
+obj1.sound()
+obj2.sound()
+obj3.sound()        
 
 
 
 
 #challenge --5
 
-# class Employee:
-#     def show_role(self):
-#         print("Employee Role : Executive Ofdficer")
+class Employee:
+    def show_role(self):
+        print("Employee Role : Executive Ofdficer")
         
         
-# class Manager(Employee):
-#     def show_role(self):
-#         print("Manager Role : Team Head ")
+class Manager(Employee):
+    def show_role(self):
+        print("Manager Role : Team Head ")
         
-# mnger1=Manager()        
-# mnger1.show_role()
+mnger1=Manager()        
+mnger1.show_role()
 
 
 
